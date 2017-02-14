@@ -3,9 +3,7 @@
 Plugin Name: Plugin_Test1
 */
  
-$test1_options_array = array(
-'test1_mode1' => 'Off',
-'test1_times' => 1 );
+
 
 /*The function below creates a menu which sits under settings.
 if you run this and click on the menu you will get an eror because
