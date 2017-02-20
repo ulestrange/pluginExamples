@@ -68,7 +68,7 @@ function my_plugin_options() {
 			<tr valign="top">
 			<th scope="row"><label for="option_two"> Replace with<label /></th>
 			<td><input type="text" id="option_two" name="my_plugin_options[option_two]"
-			value="<?php echo esc_attr($my_plugin_options['option_two']) ?>" /></td>
+			value="<?php esc_attr_e($my_plugin_options['option_two']) ?>" /></td>
 			</tr>
 		</table>
 
@@ -85,7 +85,7 @@ function my_plugin_changecontent ($text)
 {
 	
 	$my_plugin_options= get_option('my_plugin_options');
-	echo ("options are");
+	
 	print_r($my_plugin_options);
 
     $text = str_ireplace($my_plugin_options["option_one"], $my_plugin_options["option_two"], $text);
