@@ -40,12 +40,12 @@ function test2_deptweb($atts, $content = null)
 	return '<a href="http://itsligo.ie"> General Dept Home Page </a>';
 	}
 	elseif ($staff == 'Una') {
-		return '<a href=""http://itsligo.ie/staff/ulestrange">
+		return '<a href="http://itsligo.ie/staff/ulestrange">
 		Una\'s Web Site </a>';
 	}
 	elseif ($staff == 'Alan')
 	{
-		return '<a href=""http://itsligo.ie/staff/akelly"> 
+		return '<a href="http://itsligo.ie/staff/akelly"> 
 		Alan\'s Web Site </a>';
 	}
 	else
