@@ -7,7 +7,7 @@ function my_theme_enqueue_styles() {
 }
 
 /*
-* Creating a function to create our CPT
+* Creating a function to create our Films custom post type
 */
 
 function custom_post_type() {
