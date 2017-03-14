@@ -1,13 +1,11 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying archive pages for films
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
+ * @subpackage Twenty_Seventeen Child
  */
 
 get_header(); ?>
