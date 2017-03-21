@@ -1,11 +1,13 @@
 <?php
 /**
- * The template for displaying all single films
+ * The template for displaying all single posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
  * @subpackage Twenty_Seventeen
+ * @since 1.0
+ * @version 1.0
  */
 
 get_header(); ?>
@@ -15,7 +17,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			echo ("<h2>Film Template</h2>");
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 
@@ -36,7 +37,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
+	<?php get_sidebar(); ?>
 </div><!-- .wrap -->
 
 <?php get_footer();

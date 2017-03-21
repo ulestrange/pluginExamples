@@ -15,7 +15,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header">
 			<?php
-				echo('<h1> All the films in the archive </h1>');
+				echo('<h1> This is the Test Tag Template </h1>');
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 			?>
 		</header><!-- .page-header -->

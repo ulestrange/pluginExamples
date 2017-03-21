@@ -1,11 +1,13 @@
 <?php
 /**
- * The template for displaying archive pages for films
+ * The template for displaying archive pages
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen Child
+ * @subpackage Twenty_Seventeen
+ * @since 1.0
+ * @version 1.0
  */
 
 get_header(); ?>
@@ -14,10 +16,9 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header">
-			<?php
-				echo('<h1> All the films in the archive </h1>');
-				the_archive_description( '<div class="taxonomy-description">', '</div>' );
-			?>
+			
+				<h1 class="page-title"> Web Programming Discussions</h1>				
+		
 		</header><!-- .page-header -->
 	<?php endif; ?>
 
@@ -53,7 +54,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+	<?php get_sidebar(); ?>
 </div><!-- .wrap -->
 
 <?php get_footer();
