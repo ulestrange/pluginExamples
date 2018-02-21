@@ -14,7 +14,15 @@ Author URI: ...
 
 function click_to_call ($text)
 {
-	$text = $text . "Hello it is me";
+	
+	
+	// the pattern matches any 10 digit number
+	$pattern = '/([0-9]{10})/';
+	
+
+	$replacement = '<a href ="tel:$1"> $1  </a>';
+	
+	$text = preg_replace($pattern, $replacement, $text);
 	
 	return $text;
 	
