@@ -15,17 +15,32 @@ Author URI: ...
 function click_to_call ($text)
 {
 	
+	if (get_option('una-click-to-call-mode1') == 'on')
+	{
+		
+		update_option ('una-click-to-call-mode1', 'off');
+		
+		// the pattern matches any 10 digit number
+	   
+	   $pattern = '/([0-9]{10})/';
 	
-	// the pattern matches any 10 digit number
-	$pattern = '/([0-9]{10})/';
-	
-
 	$replacement = '<a href ="tel:$1"> $1  </a>';
 	
 	$text = preg_replace($pattern, $replacement, $text);
+	   
+	}
 	
+	else
+	{
+		update_option ('una-click-to-call-mode1', 'on');
+	}
+		
+		
+		
 	return $text;
 	
 }
 
 add_filter ('the_content', 'click_to_call');
+
+add_option ('una-click-to-call-mode1', 'on');
