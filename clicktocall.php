@@ -17,6 +17,9 @@ function click_to_call ($text)
 	
 	$num_digits = (int) get_option('click_to_call_number_length');
 
+  if ($num_digits >0)
+  {
+
 	// the pattern matches any 10 digit number
 	$pattern = '/([0-9]{' . $num_digits .'})/';
 	
@@ -24,7 +27,11 @@ function click_to_call ($text)
 	
 	$text = preg_replace($pattern, $replacement, $text);
 	
-	return $text . $pattern;
+	return $text ;
+  }
+
+  return $text;
+
 	
 }
 add_filter ('the_content', 'click_to_call');
@@ -57,7 +64,8 @@ function click_to_call_options_page()
   <table>
   <tr valign="top">
   <th scope="row"><label for="click_to_call_number_length">How many digits</label></th>
-  <td><input type="number" id="click_to_call_number_length" name="click_to_call_number_length" value="<?php echo get_option('click_to_call_number_length'); ?>" /></td>
+  <td><input type="number" id="click_to_call_number_length" name="click_to_call_number_length" 
+  value="<?php echo esc_attr(get_option('click_to_call_number_length')); ?>" /></td>
   </tr>
   </table>
   <?php  submit_button(); ?>
