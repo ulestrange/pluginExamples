@@ -20,7 +20,7 @@ function click_to_call ($text)
   if ($num_digits >0)
   {
 
-	// the pattern matches any 10 digit number
+	// the pattern will match a certain number of digits.
 	$pattern = '/([0-9]{' . $num_digits .'})/';
 	
 	$replacement = '<a href ="tel:$1"> $1  </a>';
